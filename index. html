@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>TaskFlow</h1>
+      <p>Une mini-application Todo pour organiser vos tâches simplement.</p>
+      <button id="themeToggle" class="theme-btn">Mode sombre</button>
+    </section>
+
+    <section class="todo-card">
+      <form id="todoForm" class="todo-form">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Ajouter une nouvelle tâche..."
+          autocomplete="off"
+        />
+        <button type="submit">Ajouter</button>
+      </form>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="active">En cours</button>
+        <button class="filter-btn" data-filter="completed">Terminées</button>
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+
+      <div class="summary">
+        <span id="taskCounter">0 tâche</span>
+        <button id="clearCompleted">Supprimer terminées</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
